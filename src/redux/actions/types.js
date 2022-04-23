@@ -1,0 +1,6 @@
+export const GET_TASKS = "GET_TASKS";
+export const LOADING_START = "LOADING_START";
+export const LOADING_END = "LOADING_END";
+export const GET_USERS_PENDING = 'GET_USERS_PENDING';
+export const GET_USERS_SUCCESS = 'GET_USERS_SUCCESS';
+export const GET_USERS_FAIL = 'GET_USERS_FAIL';

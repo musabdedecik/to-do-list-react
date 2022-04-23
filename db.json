@@ -1,0 +1,62 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Titles",
+      "description": "test denememem",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "title": "test user task",
+      "description": "test content test user task",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "title": "test user task 2",
+      "description": "test content test user task 2",
+      "completed": false
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Musab",
+      "surname": "Dedecik",
+      "email": "musabdedecik6@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "name": "Test",
+      "surname": "TestSurname",
+      "email": "test@gmail.com",
+      "password": "1234"
+    },
+    {
+      "name": "test",
+      "surname": "test sur",
+      "email": "test@gmail.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "name": "test",
+      "surname": "test2",
+      "email": "etst@gmail.com",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "name": "sdfsdf",
+      "surname": "sdfsdf",
+      "email": "dsf@gmail.com",
+      "password": "123",
+      "id": 5
+    }
+  ]
+}
