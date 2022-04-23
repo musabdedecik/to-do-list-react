@@ -6,7 +6,7 @@ const middlewares = jsonServer.defaults();
 const router = jsonServer.router(path.join(__dirname, 'db.json'))
 const PORT = process.env.PORT || 8080;
 
-app.use('/db', middlewares, router);
+app.use('/api', middlewares, router);
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/*', function (req, res) {
