@@ -71,7 +71,7 @@ const NavigationBar = () => {
               {Routes.map((page) => (
                 <MenuItem key={page.path} onClick={handleCloseNavMenu}>
                   <NavLink exact to={page.path}>
-                    <Typography textAlign="center">{page.name}</Typography>
+                    <Typography className="menu-item" textAlign="center">{page.name}</Typography>
                   </NavLink>
                 </MenuItem>
               ))}

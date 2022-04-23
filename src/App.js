@@ -16,9 +16,7 @@ function App() {
         {!isAuth && <Redirect from="/dashboard" to="/login"></Redirect>}
       </Route>
       <Redirect exact from="/" to={isAuth ? "/dashboard" : "/login"} />
-      <Route component={NotFound}>
-        <Redirect to="/dashboard"></Redirect>
-      </Route>
+      <Route component={NotFound} />
     </Switch>
   );
 }
