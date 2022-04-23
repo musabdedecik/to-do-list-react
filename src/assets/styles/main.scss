@@ -6,12 +6,26 @@ $text-color: #3a3a3a;
 $primary-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 /* variables-end */
 
+html{
+  height: 100%;
+}
+
+.overlay-login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: url('https://html.sammy-codes.com/images/background.jpg')
+}
 body {
   margin: 0;
   padding: 0;
   font-family: $primary-font-family;
   box-sizing: border-box;
   color: $text-color !important;
+  height: 100%;
 }
 
 .card-form {
@@ -102,22 +116,39 @@ h1 {
     margin-top: 10px;
   }
 }
-
-.overlay-login {
-  width: 100%;
-  height: 100vh;
+.gorev-title{
+  margin-left: 15px;
+}
+.task-form{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
-  justify-content: center;
-  background: url('https://html.sammy-codes.com/images/background.jpg')
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 25px;
+  .title {
+    color: $small-text-color;
+  }
+  .add-task-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 22px;
+    justify-content: space-between;
+   
+    .inp-wrapper{
+      width: 33%;
+    }
+  }
+  button{
+    min-width: 200px;
+    margin-left: 25px;
+  }
 }
 
 
+
 @media only screen and (max-width: 1024px) {
-  a {
-    color: #444 !important;
-  }
 
 
   .card-form {
@@ -128,7 +159,6 @@ h1 {
 
   .overlay-login {
     background: #f7f7f7;
-    height: 100%;
 
     form {
       padding-left: 15px !important;
@@ -141,6 +171,25 @@ h1 {
 }
 
 @media only screen and (max-width: 600px) {
+  .overlay-login {
+    form {
+      min-width: 90%;
+    }
+  }
+  .task-form {
+    .add-task-container{
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+    .inp-wrapper{
+      width: 100%;
+      margin-top: 25px;
+    }
+    button{
+      margin-top: 25px;
+    }
+    }
+  }
   form {
     width: 100%;
   }

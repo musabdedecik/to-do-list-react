@@ -1,5 +1,4 @@
 import axios from "axios";
-import { LOADING_START, LOADING_END } from "../redux/actions/types";
 const API_URL = process.env.NODE_ENV === "development" ? process.env.REACT_APP_DEV_API_URL : process.env.REACT_APP_PROD_API_URL;
 
 export const getQuery = async (path) => {
@@ -32,7 +31,22 @@ export const postQuery = async (path, values) => {
 
 export const deleteQuery = async (path, id) => {
     try {
-        const { data } = await axios.delete(`${API_URL}/${path}`, {
+        const { data } = await axios.delete(`${API_URL}/${path}/${id}`, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        return data
+    } catch (error) {
+        console.error(error);
+        return error
+    }
+};
+
+
+export const putQuery = async (path, id, values) => {
+    try {
+        const { data } = await axios.put(`${API_URL}/${path}/${id}`, {...values}, {
             headers: {
                 'Content-Type': 'application/json'
             }

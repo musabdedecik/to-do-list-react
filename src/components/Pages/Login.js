@@ -1,7 +1,6 @@
 import Box from "@mui/material/Box";
 import LoginForm from "../Views/Forms/LoginForm";
 import RegisterForm from "../Views/Forms/RegisterForm";
-import logo from "../../assets/images/logo.webp";
 import { useSelector } from 'react-redux'
 
 function Login() {

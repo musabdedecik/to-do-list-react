@@ -4,12 +4,9 @@ import { withRouter } from "react-router-dom";
 import { getToken } from "./config/auth";
 import DashboardLayout from "./components/Layouts/DashboardLayout";
 import NotFound from "./components/Pages/NotFound";
-import { useState } from "react";
-import { useSelector } from "react-redux";
 
 function App() {
-  const [isAuth, setAuth] = useState(getToken());
-  const loading = useSelector((state) => state.user.loading)
+  const isAuth = getToken();
   return (
     <Switch>
       <Route exact path="/login" component={Login}>

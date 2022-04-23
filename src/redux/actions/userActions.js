@@ -27,7 +27,7 @@ export const findUser = async (email, password) => {
         const users = await getQuery("users/");
         const user = users.find((user) => user?.email.toLowerCase().trim() === email.toLowerCase().trim() && user?.password.toLowerCase().trim() === password.toLowerCase().trim()) 
         if(user){
-            return setToken(user.id)
+            return setToken(user.id, user.name)
         }else{
             return false
         }

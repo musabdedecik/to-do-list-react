@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {  useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -13,6 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { SubRoutes, Routes } from "../../../config/routes";
 import { NavLink } from "react-router-dom";
+import { getUserName } from "../../../config/auth";
 
 const NavigationBar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -35,8 +36,8 @@ const NavigationBar = () => {
   };
 
   return (
-    <AppBar position="static">
-      <Container style={{ minWidth: "100%" }}>
+    <AppBar position="static" style={{marginBottom:20,}}>
+      <Container style={{ minWidth: "100%"}}>
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -91,7 +92,7 @@ const NavigationBar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Detaylı göster">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Musab Dedecik" src="/static/images/avatar/2.jpg" />
+                <Avatar alt={getUserName()} src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
             <Menu

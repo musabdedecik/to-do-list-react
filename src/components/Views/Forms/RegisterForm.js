@@ -1,10 +1,10 @@
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect,  useRef } from "react";
 import { Formik } from "formik";
 import Form from "./Form";
 import StandartTextField from "../TextFields/StandartTextField";
 import DefaultButton from "../Buttons/DefaultButton";
-import { Alert, Box, FormControl, FormHelperText, Typography } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
+import {  Box, FormControl, FormHelperText, Typography } from "@mui/material";
+import { useDispatch } from "react-redux";
 import { switchLogin } from "../../../redux/store/user";
 import * as Yup from 'yup';
 import { userRegister } from "../../../redux/actions/userActions";
@@ -12,9 +12,7 @@ import { userRegister } from "../../../redux/actions/userActions";
 const RegisterForm = () => {
     const dispatch = useDispatch()
   
-    const id = useId();
     const nameRef = useRef(null);
-    const [error, setError] = useState(false);
 
     useEffect(() => {
         nameRef.current?.focus();
@@ -113,7 +111,6 @@ const RegisterForm = () => {
                             {errors.password && touched.password && errors.password}
                         </FormHelperText>
                     </FormControl>
-                    {error && <Alert style={{ marginTop: 24 }} severity="error">Kullanıcı adı veya şifre hatalı!</Alert>}
                     <Box className="login-buttons-container">
                         <DefaultButton type="submit" variant="contained">
                             Kayıt Ol

@@ -1,21 +1,18 @@
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Formik } from "formik";
 import Form from "./Form";
 import StandartTextField from "../TextFields/StandartTextField";
 import DefaultButton from "../Buttons/DefaultButton";
 import { Alert, Box, FormControl, FormHelperText, Typography } from "@mui/material";
-import { setToken } from "../../../config/auth";
-import { findUser, getUsers, removeUser } from "../../../redux/actions/userActions";
-import { useDispatch, useSelector } from "react-redux"
+import { findUser} from "../../../redux/actions/userActions";
+import { useDispatch } from "react-redux"
 import { switchLogin } from "../../../redux/store/user";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
-  
-  const id = useId();
   const emailRef = useRef(null);
   const [error, setError] = useState(false);
-  const users = useSelector((state) => state.user.users);
+
   useEffect(() => {
     emailRef.current?.focus();
   }, []);
@@ -31,7 +28,6 @@ const LoginForm = () => {
     }
     return errors;
   };
-
 
   const handleSubmit = async (values) => {
       const isAuth = await findUser(values.email, values.password);

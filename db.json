@@ -1,25 +1,10 @@
 {
-  "todos": [
+  "tasks": [
     {
-      "id": 1,
-      "userId": 1,
-      "title": "Titles",
-      "description": "test denememem",
-      "completed": false
-    },
-    {
-      "id": 2,
-      "userId": 2,
-      "title": "test user task",
-      "description": "test content test user task",
-      "completed": false
-    },
-    {
-      "id": 3,
-      "userId": 2,
-      "title": "test user task 2",
-      "description": "test content test user task 2",
-      "completed": false
+      "title": "hey 2",
+      "description": "sdkmf",
+      "userId": "1",
+      "id": 1
     }
   ],
   "users": [
@@ -57,6 +42,20 @@
       "email": "dsf@gmail.com",
       "password": "123",
       "id": 5
+    },
+    {
+      "name": "enes",
+      "surname": "duman",
+      "email": "dfmgkdfg@gmail.com",
+      "password": "123",
+      "id": 6
+    },
+    {
+      "name": "Enes",
+      "surname": "Duman",
+      "email": "enes.dumann97@gmail.com",
+      "password": "123",
+      "id": 7
     }
   ]
 }

@@ -35,7 +35,7 @@ const user = createSlice({
       state.loading = true;
     })
     builder.addCase(userRegister.fulfilled, (state, action) => {
-      state.users = state.users.push(action.payload);
+      state.users.push(action.payload);
       state.loading = false;
     })
     builder.addCase(userRegister.rejected, (state, action) => {

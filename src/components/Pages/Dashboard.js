@@ -1,7 +1,9 @@
+import TaskList from "../Views/Todo/TaskList";
+
 const Dashboard = () => {
     return (
         <div>
-            dashboard ekranı
+            <TaskList />
         </div>
     )
 }
