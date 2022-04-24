@@ -7,20 +7,6 @@
       "assignTo": 2,
       "completed": false,
       "id": 5
-    },
-    {
-      "title": "deneme",
-      "description": "sdkfkms",
-      "assignTo": 2,
-      "userId": "1",
-      "id": 6
-    },
-    {
-      "title": "musaba",
-      "description": "ksdmfk",
-      "assignTo": 1,
-      "userId": "2",
-      "id": 7
     }
   ],
   "users": [
