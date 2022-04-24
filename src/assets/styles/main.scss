@@ -157,9 +157,8 @@ h1 {
     width: 100%;
     margin-top: 22px;
     justify-content: space-between;
-
     .inp-wrapper {
-      width: 33%;
+      width: 20%;
     }
   }
 
@@ -178,6 +177,9 @@ h1 {
 }
 
 @media only screen and (max-width: 1024px) {
+  .switchmui{
+    display: none !important;
+  }
   .card-form {
     width: 100%;
     order: 2;

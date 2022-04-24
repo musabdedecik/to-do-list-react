@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# About the App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  - In this project I created a simple SPA using React.
+  - The purpose of the application is to follow the to-do list of the logged in user.
+  - First, a Login page welcomes us.
+  - User can register or log in on the login page.
+  - A Dashboard screen comes up after logging in.
+  - I created a Navigation Bar using a MaterialUI library in the Dashboard.
+  - I have included a switch button on the navbar where we can disable the account within the application.
+  - User deactivating account cannot add and update tasks.
+  - I created an area under the NavBar and rendered the user's to-do list in this area.
+  - At the top of the Dashboard page, I created a form where the user can create a new task.
+  - At the bottom, I created a table view that instantly displays the data entered in the form.
+  - Can create a task on behalf of someone else while creating a task.
+  - If we create the task on behalf of someone else, it can perform the same task in the account to which the task is assigned.
 
-## Available Scripts
 
-In the project directory, you can run:
+# Technologies & Tools & Solutions
+  - I started the project with create-react-app.
+  - I used pascalcase naming while writing the code.
+  - I tried to give examples of the contents of the assignment you sent.
+    - I used Redux Toolkit for state management
+    - I included routing mechanism (ReactRouterDOM)
+    - I used JSON-Server (https://www.npmjs.com/package/json-server) to make CRUD operations and API requests.
+    - I used Formik (https://www.npmjs.com/package/formik) for form validation processes throughout the application.
+    - Shared on Github (https://github.com/musabdedecik/to-do-list-react)
+    - I used hooks.
+    - I used Ref Hook.
+    - I used MaterialUI as UI kit. In addition, I gave examples of different CSS uses.
+    - I deployed to Heroku (https://my-todolist-app-reactjs.herokuapp.com/)
+    - While deploying to Heroku, I had to come up with some solutions for our application to work with json-server.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Follow these steps to run the project on your computer
+  - Import the project to your computer with git clone.
+  - Go to the project directory in Visual Studio Code.
+  - Then open the `package.json` file of the project.
+  - Find the `scripts` field contained in this file.
+  - Delete `node server.js` in `start` command in `scripts` field and add `react-scripts start` command.
+  - Then install the necessary dependencies with the `npm install` command.
+  - After the dependencies are installed, you can run the `npm start` command to view the application at `http://localhost:3000`.
+  - Then run `json-server --watch db.json -p 8080` on a new terminal screen to run our backend server.

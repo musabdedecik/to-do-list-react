@@ -8,6 +8,7 @@ export const addTask = createAsyncThunk(
     async (values, { dispatch, getState }) => {
         values.userId = getToken();
         const data = await postQuery("tasks/", values);
+        data.employee = getState().user.users.find((user) => user.id == values.assignTo).name;
         return data;
     }
 );
@@ -17,7 +18,10 @@ export const getTasks = createAsyncThunk(
     'task/getTasks',
     async (values, { dispatch, getState }) => {
         const data = await getQuery("tasks/", values);
-        const filtered = data.filter((task) => task.userId === getToken())
+        var filtered = data.filter((task) => task.userId == getToken() || task.assignTo == getToken())
+        filtered.forEach(task => {
+           task.employee = getState().user.users.find((user) => user.id == task.assignTo).name
+        });
         return filtered;
     }
 );

@@ -25,7 +25,7 @@ export const getUserName = () => {
   }
 };
 
-export const setToken = (token,name) => {
+export const setToken = async (token,name) => {
   try {
     sessionStorage.setItem("token", token);
     sessionStorage.setItem("name", name);

@@ -1,10 +1,26 @@
 {
   "tasks": [
     {
-      "title": "hey 2",
-      "description": "sdkmf",
+      "title": "ıuo",
+      "description": "huıj",
       "userId": "1",
-      "id": 1
+      "assignTo": 2,
+      "completed": false,
+      "id": 5
+    },
+    {
+      "title": "deneme",
+      "description": "sdkfkms",
+      "assignTo": 2,
+      "userId": "1",
+      "id": 6
+    },
+    {
+      "title": "musaba",
+      "description": "ksdmfk",
+      "assignTo": 1,
+      "userId": "2",
+      "id": 7
     }
   ],
   "users": [
@@ -13,49 +29,16 @@
       "name": "Musab",
       "surname": "Dedecik",
       "email": "musabdedecik6@gmail.com",
-      "password": "123"
+      "password": "123",
+      "status": true
     },
     {
       "id": 2,
       "name": "Test",
-      "surname": "TestSurname",
-      "email": "test@gmail.com",
-      "password": "1234"
-    },
-    {
-      "name": "test",
-      "surname": "test sur",
+      "surname": "TestSur",
       "email": "test@gmail.com",
       "password": "123",
-      "id": 3
-    },
-    {
-      "name": "test",
-      "surname": "test2",
-      "email": "etst@gmail.com",
-      "password": "123",
-      "id": 4
-    },
-    {
-      "name": "sdfsdf",
-      "surname": "sdfsdf",
-      "email": "dsf@gmail.com",
-      "password": "123",
-      "id": 5
-    },
-    {
-      "name": "enes",
-      "surname": "duman",
-      "email": "dfmgkdfg@gmail.com",
-      "password": "123",
-      "id": 6
-    },
-    {
-      "name": "Enes",
-      "surname": "Duman",
-      "email": "enes.dumann97@gmail.com",
-      "password": "123",
-      "id": 7
+      "status": true
     }
   ]
 }

@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { addTask, getTasks, removeTask, updateTask } from '../actions/taskActions';
-// import { getUsers, removeUser, userRegister } from '../actions/userActions';
 
 const initialState = { tasks: [], currentTask: {}, loading: false }
 const task = createSlice({
@@ -26,7 +25,7 @@ const task = createSlice({
       state.loading = true;
     })
     builder.addCase(updateTask.fulfilled, (state, action) => {
-      state.tasks.find((task) => task.id === action.payload.id).completed = action.payload.completed;
+      state.tasks.find((task) => task.id == action.payload.id).completed = action.payload.completed;
       state.loading = false;
     })
     builder.addCase(updateTask.rejected, (state, action) => {

@@ -3,15 +3,15 @@ import { Formik } from "formik";
 import Form from "./Form";
 import StandartTextField from "../TextFields/StandartTextField";
 import DefaultButton from "../Buttons/DefaultButton";
-import {  Box, FormControl, FormHelperText, Typography } from "@mui/material";
-import { useDispatch } from "react-redux";
+import {  Alert, Box, FormControl, FormHelperText, Typography } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
 import { switchLogin } from "../../../redux/store/user";
 import * as Yup from 'yup';
 import { userRegister } from "../../../redux/actions/userActions";
 
 const RegisterForm = () => {
     const dispatch = useDispatch()
-  
+    const errMessage = useSelector((state) => state.user.error.message)
     const nameRef = useRef(null);
 
     useEffect(() => {
@@ -111,6 +111,7 @@ const RegisterForm = () => {
                             {errors.password && touched.password && errors.password}
                         </FormHelperText>
                     </FormControl>
+                    {errMessage && <Alert style={{ marginTop: 24 }} severity="error">{errMessage}</Alert>}
                     <Box className="login-buttons-container">
                         <DefaultButton type="submit" variant="contained">
                             Kayıt Ol

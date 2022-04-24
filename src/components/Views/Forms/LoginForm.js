@@ -7,6 +7,7 @@ import { Alert, Box, FormControl, FormHelperText, Typography } from "@mui/materi
 import { findUser} from "../../../redux/actions/userActions";
 import { useDispatch } from "react-redux"
 import { switchLogin } from "../../../redux/store/user";
+import { setToken } from "../../../config/auth";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -30,8 +31,9 @@ const LoginForm = () => {
   };
 
   const handleSubmit = async (values) => {
-      const isAuth = await findUser(values.email, values.password);
-      if(isAuth){
+      const user = await findUser(values.email, values.password);
+      await setToken(user.id, user.name)
+      if(user){
         window.location.href = "/dashboard"
       }else{
         setError(true)
